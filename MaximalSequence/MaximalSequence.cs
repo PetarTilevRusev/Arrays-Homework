@@ -15,7 +15,7 @@ class MaximalSequence
     {
         int arrayLength = int.Parse(Console.ReadLine());
 
-        int[] array = new int[arrayLength]; //I know this is a bad name for an array, but I can't figure out a better one!
+        int[] array = new int[arrayLength];
 
 
         Random randomGenerator = new Random(); //Generating random numbers, for filling our array elements
