@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-MaximalKSum", "MaximalKS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-FrequentNumber", "FrequentNumber\09-FrequentNumber.csproj", "{C121D317-B258-41E4-BE81-890B56871478}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-SelectionSort", "SelectionSort\07-SelectionSort.csproj", "{C1E5BE19-5150-48FD-907D-6B9C1DEC613D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-MaximalSum", "MaximalSum\08-MaximalSum.csproj", "{697A4059-6901-419A-8E72-19B3C66FE83E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{C121D317-B258-41E4-BE81-890B56871478}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C121D317-B258-41E4-BE81-890B56871478}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C121D317-B258-41E4-BE81-890B56871478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1E5BE19-5150-48FD-907D-6B9C1DEC613D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E5BE19-5150-48FD-907D-6B9C1DEC613D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E5BE19-5150-48FD-907D-6B9C1DEC613D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E5BE19-5150-48FD-907D-6B9C1DEC613D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{697A4059-6901-419A-8E72-19B3C66FE83E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697A4059-6901-419A-8E72-19B3C66FE83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697A4059-6901-419A-8E72-19B3C66FE83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697A4059-6901-419A-8E72-19B3C66FE83E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

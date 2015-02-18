@@ -13,15 +13,18 @@ class MaximalSequence
 {
     static void Main()
     {
+        Console.Write("Array length: ");
         int arrayLength = int.Parse(Console.ReadLine());
 
-        int[] array = new int[arrayLength]; //I know this is a bad name for an array, but I can't figure out a better one!
+        int[] array = new int[arrayLength];
 
-
+        Console.Write("Array values: ");
         Random randomGenerator = new Random(); //Generating random numbers, for filling our array elements
         for (int i = 0; i < arrayLength; i++) //For loop to fill every array element with random generated value
         {
             array[i] = randomGenerator.Next(1, 5);
+            Console.Write("{0} ", array[i]);
+            //array[i] = int.Parse(Console.ReadLine());
         }
 
         int bestLength = 0, bestElement = 0;
@@ -48,17 +51,16 @@ class MaximalSequence
 
             if (currLength >= bestLength)
             {
-                bestLength = currLength;
                 bestElement = currElement;
+                bestLength = currLength;
             }
         }
-
-        Console.Write("Array elements: " + "{" + string.Join(", ", array) + "}\n");
-        Console.Write("The maximal sequence of equal elements in the array is: {");
+        Console.WriteLine();
         for (int i = 0; i < bestLength; i++)
         {
-            Console.Write(i != bestLength - 1 ? bestElement + ", " : bestElement + "}\n");
+            Console.Write(bestElement + ", ");
         }
+        Console.WriteLine();
 
     }
 }

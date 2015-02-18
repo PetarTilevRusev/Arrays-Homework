@@ -19,47 +19,56 @@ class MaximalIncreasingSequence
 
         Random randomGenerator = new Random(); //Generating random numbers, for filling our array elements
 
-        Console.Write("Array values: ");
+        Console.WriteLine("Array values: ");
         for (int i = 0; i < arrayLength; i++) //For loop to fill every array element with random generated value
         {
-            array[i] = randomGenerator.Next(1, 5);
+            array[i] = randomGenerator.Next(1, 10);
             Console.Write("{0} ", array[i]);
+
+            //array[i] = int.Parse(Console.ReadLine()); //If u wan't to manualy enter the array values!
         }
 
-        int bestLength = 0, bestElement = 0;
-        int currLength = 1, currElement = array[1];
+        int previousElement = array[0];
+        int currentLength = 1;
+        int bestLength = 0;
+        int currentValue = 0;
+        int bestValue = 0;
 
-        if (array.Length == 1)
-        {
-            bestElement = currElement;
-            bestLength = 1;
-            return;
-        }
+        Console.WriteLine();
 
-        for (int i = 0; i < arrayLength - 1; i++)
+        for (int i = 1; i < array.Length; i++)
         {
-            if (array[i] < array[i + 1] && array[i + 1] == array[i] + 1) //Check if the current element is equal to next array element
+            if (array[i] > previousElement)
             {
-                currLength++;
+                if (array[i] - 1 == previousElement)
+                {
+                    currentLength++;
+                    currentValue = array[i];
+                }
             }
             else
             {
-                currElement = array[i];
-                currLength = 1;
+                currentLength = 1;
             }
 
-            if (currLength >= bestLength)
+            if (currentLength >= bestLength)
             {
-                bestLength = currLength;
-                bestElement = currElement;
+                bestLength = currentLength;
+                bestValue = currentValue;
             }
+
+            previousElement = array[i];
         }
-        Console.WriteLine();
+        
+        int countStart = (bestValue - bestLength) + 1;
 
         for (int i = 0; i < bestLength; i++)
         {
-            Console.Write(i != bestLength - 1 ? bestElement + ", " : bestElement + "\n");
+            Console.Write(countStart + ", ");
+            countStart++;
         }
+
+        Console.WriteLine();
     }
 }
 
